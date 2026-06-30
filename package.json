@@ -42,5 +42,8 @@
     "babel-plugin-module-resolver": "^5.0.2",
     "typescript": "^5.3.3"
   },
-  "private": true
+  "private": true,
+  "overrides": {
+    "react-dom": "19.1.0"
+  }
 }
