@@ -10,7 +10,10 @@
         "buildType": "apk"
       },
       "env": {
-        "EXPO_PUBLIC_API_URL": "https://apisplitmate.vercel.app/api/v1"
+        "EXPO_PUBLIC_API_URL": "https://apisplitmate.vercel.app/api/v1",
+        "EXPO_PUBLIC_GOOGLE_ANDROID_CLIENT_ID": "your_android_client_id.apps.googleusercontent.com",
+        "EXPO_PUBLIC_GOOGLE_IOS_CLIENT_ID": "your_ios_client_id.apps.googleusercontent.com",
+        "EXPO_PUBLIC_GOOGLE_WEB_CLIENT_ID": "your_web_client_id.apps.googleusercontent.com"
       }
     },
     "preview": {
@@ -19,7 +22,10 @@
         "buildType": "apk"
       },
       "env": {
-        "EXPO_PUBLIC_API_URL": "https://apisplitmate.vercel.app/api/v1"
+        "EXPO_PUBLIC_API_URL": "https://apisplitmate.vercel.app/api/v1",
+        "EXPO_PUBLIC_GOOGLE_ANDROID_CLIENT_ID": "your_android_client_id.apps.googleusercontent.com",
+        "EXPO_PUBLIC_GOOGLE_IOS_CLIENT_ID": "your_ios_client_id.apps.googleusercontent.com",
+        "EXPO_PUBLIC_GOOGLE_WEB_CLIENT_ID": "your_web_client_id.apps.googleusercontent.com"
       }
     },
     "production": {
@@ -27,7 +33,10 @@
         "buildType": "app-bundle"
       },
       "env": {
-        "EXPO_PUBLIC_API_URL": "https://apisplitmate.vercel.app/api/v1"
+        "EXPO_PUBLIC_API_URL": "https://apisplitmate.vercel.app/api/v1",
+        "EXPO_PUBLIC_GOOGLE_ANDROID_CLIENT_ID": "your_android_client_id.apps.googleusercontent.com",
+        "EXPO_PUBLIC_GOOGLE_IOS_CLIENT_ID": "your_ios_client_id.apps.googleusercontent.com",
+        "EXPO_PUBLIC_GOOGLE_WEB_CLIENT_ID": "your_web_client_id.apps.googleusercontent.com"
       }
     }
   },
