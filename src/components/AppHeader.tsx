@@ -1,4 +1,4 @@
-import { View, Text, TouchableOpacity, Image } from 'react-native';
+import { View, TouchableOpacity, Image } from 'react-native';
 import { useRouter } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
@@ -8,11 +8,11 @@ import { useTheme } from '../context/ThemeContext';
 const FAVICON = require('../../assets/icon.png');
 
 interface AppHeaderProps {
-  title: string;
+  title?: string;
   rightSlot?: React.ReactNode;
 }
 
-export default function AppHeader({ title, rightSlot }: AppHeaderProps) {
+export default function AppHeader({ rightSlot }: AppHeaderProps) {
   const router = useRouter();
   const { user } = useAuth();
   const { isDark, toggle } = useTheme();
@@ -32,23 +32,17 @@ export default function AppHeader({ title, rightSlot }: AppHeaderProps) {
     >
       <View style={{ flexDirection: 'row', alignItems: 'center', height: 44 }}>
 
-        {/* Left — favicon logo */}
-        <View style={{ flex: 1, flexDirection: 'row', alignItems: 'center' }}>
+        {/* Left — spacer to balance right icons */}
+        <View style={{ flex: 1 }} />
+
+        {/* Center — logo perfectly centered (mirrors how the title used absolute + full-width) */}
+        <View style={{ position: 'absolute', left: 0, right: 0, alignItems: 'center' }}>
           <Image
             source={FAVICON}
             style={{ width: 36, height: 36, borderRadius: 8 }}
             resizeMode="contain"
           />
         </View>
-
-        {/* Center — screen title */}
-        <Text
-          className="text-[15px] font-bold text-slate-900 dark:text-white"
-          style={{ position: 'absolute', left: 0, right: 0, textAlign: 'center' }}
-          numberOfLines={1}
-        >
-          {title}
-        </Text>
 
         {/* Right — theme toggle + bell + avatar (or custom slot) */}
         <View style={{ flex: 1, flexDirection: 'row', alignItems: 'center', justifyContent: 'flex-end', gap: 2 }}>

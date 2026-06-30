@@ -13,7 +13,7 @@ export default function Landing() {
       <View className="items-center gap-5">
         <Image
           source={require('../../assets/icon.png')}
-          className="w-32 h-32 rounded-3xl"
+          style={{ width: 128, height: 128, borderRadius: 24, alignSelf: 'center' }}
           resizeMode="contain"
         />
         <View className="items-center gap-2">

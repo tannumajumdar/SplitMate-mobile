@@ -1,7 +1,7 @@
 import * as SecureStore from 'expo-secure-store';
 import type { AuthUser, RoomData, RoomMemberData, Expense, Split } from '../types';
 
-const API_URL = process.env.EXPO_PUBLIC_API_URL ?? 'http://10.0.2.2:5000/api/v1';
+const API_URL = process.env.EXPO_PUBLIC_API_URL ?? 'https://apisplitmate.vercel.app/api/v1';
 const TOKEN_KEY = 'sm_access_token';
 
 // ─── Token store ─────────────────────────────────────────────────────────────
